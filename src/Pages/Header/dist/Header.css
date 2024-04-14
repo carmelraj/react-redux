@@ -1,0 +1,29 @@
+.Header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.Header ul {
+  display: flex;
+  flex-direction: row;
+}
+.Header ul li {
+  list-style-type: none;
+  margin-right: 15px;
+}
+.Header ul .active {
+  color: red;
+}
+.Header .rightNav {
+  margin-right: 15px;
+}
+.Header .rightNav p {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+.Header .rightNav span {
+  font-size: 12px;
+  cursor: pointer;
+}
