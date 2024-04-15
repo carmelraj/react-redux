@@ -14,8 +14,8 @@ const counterSlice = createSlice({
     reset(state) {
       state.count = 0;
     },
-    customIncrement(state, acion) {
-      state.count += acion.payload;
+    customIncrement(state, action) {
+      state.count += action.payload;
     },
   },
 });

@@ -13,7 +13,7 @@ export const loginUser = createAsyncThunk(
     if (credentials.name !== "") {
       try {
         const request = await axios.post(
-          "http://localhost:8000/user",
+          "https://dummyjson.com/auth/login",
           credentials
         );
         const response = request.data;
@@ -21,9 +21,10 @@ export const loginUser = createAsyncThunk(
       } catch (error) {
         return rejectWithValue(error);
       }
-    } else if (credentials.name == "") {
-      return (credentials.name = "");
     }
+    //  else if (credentials.name == "") {
+    //   return (credentials.name = "");
+    // }
   }
 );
 

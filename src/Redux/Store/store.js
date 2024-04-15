@@ -4,12 +4,14 @@ import counterSlice from "../Slice/counterSlice";
 import todoSlice from "../Slice/todoSlice";
 import { productApi } from "../Slice/productSlice";
 import loginSlice from "../Slice/loginSlice";
+import useDetailSlice from "../Slice/userDetailSlice";
 const store = configureStore({
   reducer: {
     user: userSlice,
     counter: counterSlice,
     todo: todoSlice,
     login: loginSlice,
+    userDetails: useDetailSlice,
     [productApi.reducerPath]: productApi.reducer,
   },
   middleware: (getDefaultMiddleware) => {

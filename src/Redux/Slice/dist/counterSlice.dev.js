@@ -22,8 +22,8 @@ var counterSlice = (0, _toolkit.createSlice)({
     reset: function reset(state) {
       state.count = 0;
     },
-    customIncrement: function customIncrement(state, acion) {
-      state.count += acion.payload;
+    customIncrement: function customIncrement(state, action) {
+      state.count += action.payload;
     }
   }
 });

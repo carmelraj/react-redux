@@ -12,7 +12,8 @@ const Login = () => {
   const loginHandler = (e) => {
     e.preventDefault();
     const data = {
-      name: nameRef.current.value,
+      // id: Date.now(),
+      username: nameRef.current.value,
       password: pwdRef.current.value,
     };
     dispatch(loginUser(data))
@@ -24,13 +25,20 @@ const Login = () => {
 
         // }
 
-        if (response.name === nameRef.current.value) {
+        // if (response.name === nameRef.current.value) {
+        //   navigate("/");
+        // }
+        if (response.token) {
           navigate("/");
         }
       })
       .catch((error) => {
         console.error(error);
       });
+  };
+
+  const registerHandler = () => {
+    navigate("/register");
   };
 
   return (
@@ -41,6 +49,9 @@ const Login = () => {
           <br></br>
           <input type="password" placeholder="Password" ref={pwdRef} />
           <br></br>
+          <button onClick={registerHandler} type="button">
+            Register
+          </button>
           <button>Login</button>
         </form>
       </div>

@@ -21,13 +21,13 @@ var loginUser = (0, _toolkit.createAsyncThunk)("user/login", function _callee(cr
           console.log("loginSlice", credentials);
 
           if (!(credentials.name !== "")) {
-            _context.next = 16;
+            _context.next = 14;
             break;
           }
 
           _context.prev = 3;
           _context.next = 6;
-          return regeneratorRuntime.awrap(_axios["default"].post("http://localhost:8000/user", credentials));
+          return regeneratorRuntime.awrap(_axios["default"].post("https://dummyjson.com/auth/login", credentials));
 
         case 6:
           request = _context.sent;
@@ -40,18 +40,6 @@ var loginUser = (0, _toolkit.createAsyncThunk)("user/login", function _callee(cr
           return _context.abrupt("return", rejectWithValue(_context.t0));
 
         case 14:
-          _context.next = 18;
-          break;
-
-        case 16:
-          if (!(credentials.name == "")) {
-            _context.next = 18;
-            break;
-          }
-
-          return _context.abrupt("return", credentials.name = "");
-
-        case 18:
         case "end":
           return _context.stop();
       }
